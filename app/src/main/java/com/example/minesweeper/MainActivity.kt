@@ -37,16 +37,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.minesweeper.classes.TopBar
+import com.example.minesweeper.classes.level
 import com.example.minesweeper.ui.theme.MinesweeperTheme
 
-var topBar = TopBar()
-
+val level:level = level()
+val topBar = TopBar()
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            topBar.create()
+//            topBar.create()
+            level.create()
         }
     }
 }
